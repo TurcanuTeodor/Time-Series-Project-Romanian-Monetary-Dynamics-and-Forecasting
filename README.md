@@ -6,19 +6,19 @@
 
 ## Executive Summary
 
-This project analyzes Romania's monetary and inflation dynamics using monthly time series data from 1996 onward. The work is split into two complementary applications:
+This project analyzes Romania's monetary and inflation dynamics using monthly time series data from 1996 onward. The work is split into two parts:
 
 1. A univariate forecasting exercise for the Harmonised Index of Consumer Prices (HICP), where the Box-Jenkins methodology is used to identify, estimate, validate, and forecast an ARIMA model.
 2. A multivariate econometric study of inflation, money market interest rates, and credit volume using cointegration tools, a VECM framework, and impulse response analysis.
 
-The main finding is that Romanian inflation is persistent, structurally shaped by long-run macroeconomic shifts, and responsive to monetary policy transmission channels. The best ARIMA specification in the study is ARIMA(1,2,1)(1,0,2)[12], which delivers strong in-sample fit and stable 12-month forecasts. In the multivariate application, the Johansen framework supports a cointegrated system with a restricted rank of 2, and impulse responses show that ROBOR shocks reduce both inflation and credit growth over time.
+The main finding is that Romanian inflation is persistent, shaped by long-run macroeconomic shifts, and responsive to monetary policy transmission channels. The best ARIMA specification in the study is ARIMA(1,2,1)(1,0,2)[12], which delivers a strong in-sample fit and stable 12-month forecasts. In the multivariate application, the Johansen framework supports a cointegrated system with a restricted rank of 2, and impulse responses show that ROBOR shocks reduce both inflation and credit growth over time.
 
 ## Project Highlights
 
 - Monthly Romanian data covering the transition period, EU accession era, and post-pandemic inflation shock.
 - Classical Box-Jenkins workflow with ADF testing, ACF/PACF inspection, model comparison, residual diagnostics, and forecasting.
 - Cointegration-based macroeconomic analysis using Johansen tests, VECM estimation, IRFs, and multivariate forecasts.
-- Recruiter-friendly structure with clear outputs, model choices, and reproducible run instructions.
+- Clear outputs, model choices, and reproducible run instructions.
 
 ## Models Used
 
@@ -70,27 +70,28 @@ The main finding is that Romanian inflation is persistent, structurally shaped b
 | Restricted cointegration rank | 2 |
 | Main IRF finding | ROBOR shocks reduce inflation and credit over time |
 
-## Visual Placeholders
+## Figures From the Report
 
-Replace these placeholders with exported figures from your final analysis.
+The extracted figures are stored in `docs/figures/`. The table below maps each file to the content it shows.
 
-### Architecture Diagram
-
-![Project Architecture](docs/diagrams/architecture.png)
-
-### Model Performance Charts
-
-![ARIMA diagnostics](docs/charts/arima-diagnostics.png)
-
-![Forecast accuracy](docs/charts/forecast-performance.png)
-
-### Multivariate Analysis Charts
-
-![Johansen cointegration](docs/charts/johansen-test.png)
-
-![Impulse response functions](docs/charts/irf.png)
-
-![VECM forecast](docs/charts/vecm-forecast.png)
+| Caption | File |
+| --- | --- |
+| HICP evolution in levels | [figure-01.png](docs/figures/figure-01.png) |
+| ARIMA residual diagnostics | [figure-02.png](docs/figures/figure-02.png) |
+| HICP 12-month forecast | [figure-03.png](docs/figures/figure-03.png) |
+| Forecast values table for HICP | [figure-04.png](docs/figures/figure-04.png) |
+| Log-HICP evolution | [figure-05.png](docs/figures/figure-05.png) |
+| ADF test on log-HICP | [figure-06.png](docs/figures/figure-06.png) |
+| Monthly inflation rate | [figure-07.png](docs/figures/figure-07.png) |
+| VECM forecast for HICP, ROBOR, and credit | [figure-08.png](docs/figures/figure-08.png) |
+| Log-HICP forecast output | [figure-09.png](docs/figures/figure-09.png) |
+| ADF test on log-HICP levels | [figure-10.png](docs/figures/figure-10.png) |
+| ADF test on differenced HICP | [figure-11.png](docs/figures/figure-11.png) |
+| Johansen cointegration test output | [figure-12.png](docs/figures/figure-12.png) |
+| ACF of inflation | [figure-13.png](docs/figures/figure-13.png) |
+| PACF of inflation | [figure-14.png](docs/figures/figure-14.png) |
+| ARIMA model comparison table | [figure-15.png](docs/figures/figure-15.png) |
+| ARIMA summary and fit statistics | [figure-16.png](docs/figures/figure-16.png) |
 
 ## Repository Structure
 
@@ -175,21 +176,20 @@ source("Script-Application2-VECM.R")
 - The multivariate system suggests a stable long-run relationship between inflation, interest rates, and credit volume.
 - Higher ROBOR levels are associated with lower inflation and lower credit demand over the forecast horizon.
 
-## Deliverables for Recruiters
+## What This Project Demonstrates
 
 - A complete univariate forecasting pipeline.
 - A multivariate monetary transmission analysis.
 - Interpretable diagnostics and forecast outputs.
 - Reproducible R scripts organized for review.
 
-## Suggested Enhancements
+## Suggested Next Steps
 
-If you want to make the repository even stronger for recruiters, consider adding:
+To make the repository even stronger, consider adding:
 
-- Exported figures in `docs/`.
 - A short methodology PDF or presentation.
 - A rendered HTML or PDF report.
-- A screenshot of the final forecast plots.
+- A cover image or screenshot of the final forecast plots.
 
 ## License
 
