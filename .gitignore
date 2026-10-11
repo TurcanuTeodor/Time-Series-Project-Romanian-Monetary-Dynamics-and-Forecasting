@@ -1,0 +1,49 @@
+# R project artifacts
+.Rhistory
+.RData
+.Ruserdata
+.Rapp.history
+.Rprofile
+
+# RStudio / Posit workbench
+.Rproj.user/
+*.Rproj.user/
+
+# Workspace and environment files
+.Renviron
+
+# Package / dependency caches
+packrat/
+renv/
+renv.lock
+
+# Data files and generated outputs
+Data/
+*.csv
+*.tsv
+*.rds
+*.RDS
+*.rda
+*.Rda
+*.sav
+*.dta
+*.parquet
+*.feather
+*.qs
+*.sqlite
+*.db
+
+# General cache folders
+cache/
+tmp/
+temp/
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# IDE files
+.vscode/
+.idea/
